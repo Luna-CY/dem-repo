@@ -1,0 +1,38 @@
+name: golang
+versions:
+  - version: 1.19.4
+    alias:
+      - 1.19
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go{VERSION}.darwin-arm64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
+  - version: 1.19.3
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go{VERSION}.darwin-arm64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
