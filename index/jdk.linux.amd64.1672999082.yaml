@@ -1,0 +1,32 @@
+name: jdk
+versions:
+  - version: 19
+    paths:
+      - "{ROOT}/jdk-{VERSION}.jdk/Contents/Home/bin"
+    archive:
+      enable: true
+      package: "https://download.java.net/java/GA/jdk{VERSION}/877d6127e982470ba2a7faa31cc93d04/36/GPL/openjdk-{VERSION}_linux-x64_bin.tar.gz"
+  - version: 18.0.2
+    alias:
+      - 18
+    paths:
+      - "{ROOT}/jdk-{VERSION}.jdk/Contents/Home/bin"
+    archive:
+      enable: true
+      package: "https://download.java.net/java/GA/jdk{VERSION}/f6ad4b4450fd4d298113270ec84f30ee/9/GPL/openjdk-{VERSION}_linux-x64_bin.tar.gz"
+  - version: 17.0.2
+    alias:
+      - 17
+    paths:
+      - "{ROOT}/jdk-{VERSION}.jdk/Contents/Home/bin"
+    archive:
+      enable: true
+      package: "https://download.java.net/java/GA/jdk{VERSION}/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-{VERSION}_linux-x64_bin.tar.gz"
+  - version: 16.0.2
+    alias:
+      - 16
+    paths:
+      - "{ROOT}/jdk-{VERSION}.jdk/Contents/Home/bin"
+    archive:
+      enable: true
+      package: "https://download.java.net/java/GA/jdk{VERSION}/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-{VERSION}_linux-x64_bin.tar.gz"

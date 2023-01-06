@@ -1,0 +1,47 @@
+name: python
+versions:
+  - version: 3.10.9
+    alias:
+      - 3.10
+    paths:
+      - "{ROOT}/bin"
+    archive:
+      enable: true
+      package: "https://raw.githubusercontent.com/Luna-CY/dem/main/packages/python/{VERSION}/darwin-amd64.tar.gz"
+    source:
+      enable: true
+      package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
+      depends:
+        - version: xz-5.2.6
+          source:
+            enable: true
+            package: "https://jaist.dl.sourceforge.net/project/lzmautils/xz-5.2.6.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/xz-5.2.6/* {TEMP}"
+                - "{TEMP}/configure --prefix={DEPEND}/xz/5.2.6 --disable-xz --disable-xzdec --disable-scripts --disable-doc"
+                - "make check"
+                - "make && make install"
+        - version: zlib-1.2.12
+          source:
+            enable: true
+            package: "https://www.zlib.net/fossils/zlib-1.2.12.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/zlib-1.2.12/* {TEMP}"
+                - "{TEMP}/configure --prefix={DEPEND}/zlib/1.2.12"
+                - "make && make test && make install"
+        - version: openssl-3.0.7
+          source:
+            enable: true
+            package: "https://github.com/openssl/openssl/archive/refs/tags/openssl-3.0.7.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/openssl-openssl-3.0.7/* {TEMP}"
+                - "{TEMP}/config --prefix={DEPEND}/openssl/3.0.7 --openssldir={DEPEND}/openssl/3.0.7 shared"
+                - "make && make install"
+      build:
+        chains:
+          - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
+          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --with-openssl-rpath=auto --enable-optimizations"
+          - "make && make install"

@@ -13,7 +13,7 @@ versions:
       - GOMODCACHE={ROOT}/data/pkg/mod
     archive:
       enable: true
-      package: "https://go.dev/dl/go{VERSION}.darwin-arm64.tar.gz"
+      package: "https://go.dev/dl/go{VERSION}.darwin-amd64.tar.gz"
       script:
         install:
           after:
@@ -32,7 +32,7 @@ versions:
       - GOMODCACHE={ROOT}/data/pkg/mod
     archive:
       enable: true
-      package: "https://go.dev/dl/go{VERSION}.darwin-arm64.tar.gz"
+      package: "https://go.dev/dl/go{VERSION}.darwin-amd64.tar.gz"
       script:
         install:
           after:
@@ -51,7 +51,7 @@ versions:
       - GOMODCACHE={ROOT}/data/pkg/mod
     archive:
       enable: true
-      package: "https://go.dev/dl/go{VERSION}.darwin-arm64.tar.gz"
+      package: "https://go.dev/dl/go{VERSION}.darwin-amd64.tar.gz"
       script:
         install:
           after:
@@ -70,7 +70,7 @@ versions:
       - GOMODCACHE={ROOT}/data/pkg/mod
     archive:
       enable: true
-      package: "https://go.dev/dl/go{VERSION}.darwin-arm64.tar.gz"
+      package: "https://go.dev/dl/go{VERSION}.darwin-amd64.tar.gz"
       script:
         install:
           after:

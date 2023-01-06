@@ -1,0 +1,10 @@
+name: protoc
+versions:
+  - version: 21.12
+    alias:
+      - 21
+    paths:
+      - "{ROOT}/bin"
+    archive:
+      enable: true
+      package: "https://github.com/protocolbuffers/protobuf/releases/download/v{VERSION}/protoc-{VERSION}-osx-aarch_64.zip"
