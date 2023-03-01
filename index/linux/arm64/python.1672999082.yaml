@@ -1,0 +1,97 @@
+name: python
+versions:
+  - version: 3.11.1
+    alias:
+      - 3.11
+    paths:
+      - "{ROOT}/bin"
+    archive:
+      enable: true
+      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/packages/python/{VERSION}/linux-arm64.tar.gz"
+    source:
+      enable: true
+      package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
+      build:
+        chains:
+          - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
+          - "{TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
+          - "make && make install"
+      depends:
+        - version: openssl-3.0.7
+          source:
+            enable: true
+            package: "https://github.com/openssl/openssl/archive/refs/tags/openssl-3.0.7.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/openssl-openssl-3.0.7/* {TEMP}"
+                - "{TEMP}/config --prefix={DEPEND}/openssl/3.0.7 --openssldir={DEPEND}/openssl/3.0.7"
+                - "make && make install"
+  - version: 3.10.9
+    alias:
+      - 3.10
+    paths:
+      - "{ROOT}/bin"
+    archive:
+      enable: true
+      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/packages/python/{VERSION}/linux-arm64.tar.gz"
+    source:
+      enable: true
+      package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
+      build:
+        chains:
+          - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
+          - "{TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
+          - "make && make install"
+      depends:
+  - version: 3.9.16
+    alias:
+      - 3.9
+    paths:
+      - "{ROOT}/bin"
+    archive:
+      enable: true
+      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/packages/python/{VERSION}/linux-arm64.tar.gz"
+    source:
+      enable: true
+      package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
+      build:
+        chains:
+          - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
+          - "{TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
+          - "make && make install"
+      depends:
+        - version: openssl-3.0.7
+          source:
+            enable: true
+            package: "https://github.com/openssl/openssl/archive/refs/tags/openssl-3.0.7.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/openssl-openssl-3.0.7/* {TEMP}"
+                - "{TEMP}/config --prefix={DEPEND}/openssl/3.0.7 --openssldir={DEPEND}/openssl/3.0.7"
+                - "make && make install"
+  - version: 3.8.16
+    alias:
+      - 3.8
+    paths:
+      - "{ROOT}/bin"
+    archive:
+      enable: true
+      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/packages/python/{VERSION}/linux-arm64.tar.gz"
+    source:
+      enable: true
+      package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
+      build:
+        chains:
+          - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
+          - "{TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/1.1.1.p --enable-optimizations"
+          - "make && make install"
+      depends:
+        - version: openssl-1.1.1p
+          source:
+            enable: true
+            package: "https://github.com/openssl/openssl/archive/refs/tags/OpenSSL_1_1_1p.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/openssl-OpenSSL_1_1_1p/* {TEMP}"
+                - "{TEMP}/config --prefix={DEPEND}/openssl/1.1.1.p --openssldir={DEPEND}/openssl/1.1.1.p"
+                - "make && make install"

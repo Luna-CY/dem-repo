@@ -1,0 +1,41 @@
+name: redis
+versions:
+  - version: 7.0.7
+    alias:
+      - 7
+    paths:
+      - "{ROOT}/bin"
+    source:
+      enable: true
+      package: "https://github.com/redis/redis/archive/{VERSION}.tar.gz"
+      build:
+        chains:
+          - "mv {TEMP}/redis-{VERSION}/* {TEMP}"
+          - "make && make test"
+          - "make PREFIX={ROOT} install"
+  - version: 6.2.8
+    alias:
+      - 6
+    paths:
+      - "{ROOT}/bin"
+    source:
+      enable: true
+      package: "https://github.com/redis/redis/archive/{VERSION}.tar.gz"
+      build:
+        chains:
+          - "mv {TEMP}/redis-{VERSION}/* {TEMP}"
+          - "make && make test"
+          - "make PREFIX={ROOT} install"
+  - version: 5.0.14
+    alias:
+      - 5
+    paths:
+      - "{ROOT}/bin"
+    source:
+      enable: true
+      package: "https://github.com/redis/redis/archive/{VERSION}.tar.gz"
+      build:
+        chains:
+          - "mv {TEMP}/redis-{VERSION}/* {TEMP}"
+          - "make && make test"
+          - "make PREFIX={ROOT} install"

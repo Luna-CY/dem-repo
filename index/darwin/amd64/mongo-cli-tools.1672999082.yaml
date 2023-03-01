@@ -1,0 +1,11 @@
+name: mongo-cmd-cli
+versions:
+  - version: 100.6.1
+    alias:
+      - 100
+      - 100.6
+    paths:
+      - "{ROOT}/mongodb-database-tools-macos-x86_64-{VERSION}/bin"
+    archive:
+      enable: true
+      package: "https://fastdl.mongodb.org/tools/db/mongodb-database-tools-macos-x86_64-{VERSION}.zip"

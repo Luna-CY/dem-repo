@@ -1,0 +1,11 @@
+name: mongosh
+versions:
+  - version: 1.6.2
+    alias:
+      - 1
+      - 1.6
+    paths:
+      - "{ROOT}/mongosh-{VERSION}-linux-arm64/bin"
+    archive:
+      enable: true
+      package: "https://downloads.mongodb.com/compass/mongosh-{VERSION}-linux-arm64.tgz"

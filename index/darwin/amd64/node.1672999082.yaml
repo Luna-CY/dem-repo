@@ -1,0 +1,35 @@
+name: node
+versions:
+  - version: 19.3.0
+    alias:
+      - 19
+    paths:
+      - "{ROOT}/node-v{VERSION}-darwin-x64/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - npm_config_prefix={ROOT}/data
+      - npm_config_cache={ROOT}/cache
+    archive:
+      enable: true
+      package: "https://nodejs.org/download/release/v{VERSION}/node-v{VERSION}-darwin-x64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+  - version: 18.12.1
+    alias:
+      - 18
+      - 18-lts
+    paths:
+      - "{ROOT}/node-v{VERSION}-darwin-x64/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - npm_config_prefix={ROOT}/data
+      - npm_config_cache={ROOT}/cache
+    archive:
+      enable: true
+      package: "https://nodejs.org/download/release/v{VERSION}/node-v{VERSION}-darwin-x64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"

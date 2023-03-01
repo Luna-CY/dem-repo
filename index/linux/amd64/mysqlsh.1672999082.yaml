@@ -1,0 +1,10 @@
+name: mysqlsh
+versions:
+  - version: 8.0.31
+    alias:
+      - 8
+    paths:
+      - "{ROOT}/bin"
+    archive:
+      enable: true
+      package: "https://cdn.mysql.com/Downloads/MySQL-Shell/mysql-shell-{VERSION}-linux-glibc2.12-x86-64bit.tar.gz"

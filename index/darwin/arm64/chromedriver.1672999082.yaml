@@ -1,0 +1,50 @@
+name: chromedriver
+versions:
+  - version: 110.0.5481.77
+    alias:
+      - 110.0
+    paths:
+      - "{ROOT}"
+    archive:
+      enable: true
+      package: "https://chromedriver.storage.googleapis.com/{VERSION}/chromedriver_mac_arm64.zip"
+  - version: 109.0.5414.74
+    alias:
+      - 109.0
+    paths:
+      - "{ROOT}"
+    archive:
+      enable: true
+      package: "https://chromedriver.storage.googleapis.com/{VERSION}/chromedriver_mac_arm64.zip"
+  - version: 108.0.5359.71
+    alias:
+      - 108.0
+    paths:
+      - "{ROOT}"
+    archive:
+      enable: true
+      package: "https://chromedriver.storage.googleapis.com/{VERSION}/chromedriver_mac_arm64.zip"
+  - version: 107.0.5304.62
+    alias:
+      - 107.0
+    paths:
+      - "{ROOT}"
+    archive:
+      enable: true
+      package: "https://chromedriver.storage.googleapis.com/{VERSION}/chromedriver_mac_arm64.zip"
+  - version: 106.0.5249.61
+    alias:
+      - 106.0
+    paths:
+      - "{ROOT}"
+    archive:
+      enable: true
+      package: "https://chromedriver.storage.googleapis.com/{VERSION}/chromedriver_mac_arm64.zip"
+  - version: 105.0.5195.52
+    alias:
+      - 105.0
+    paths:
+      - "{ROOT}"
+    archive:
+      enable: true
+      package: "https://chromedriver.storage.googleapis.com/{VERSION}/chromedriver_mac_arm64.zip"

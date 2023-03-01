@@ -1,0 +1,131 @@
+name: golang
+versions:
+  - version: 1.20.0
+    alias:
+      - 1.20
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go1.20.linux-amd64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
+  - version: 1.19.5
+    alias:
+      - 1.19
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go{VERSION}.linux-amd64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
+  - version: 1.19.4
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go{VERSION}.linux-amd64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
+  - version: 1.18.10
+    alias:
+      - 1.18
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go{VERSION}.linux-amd64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
+  - version: 1.18.9
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go{VERSION}.linux-amd64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
+  - version: 1.17.13
+    alias:
+      - 1.17
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go{VERSION}.linux-amd64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
+  - version: 1.16.15
+    alias:
+      - 1.16
+    paths:
+      - "{ROOT}/bin"
+      - "{ROOT}/data/bin"
+    environments:
+      - GOENV=false # 禁用默认的环境配置文件
+      - GOPATH={ROOT}/data
+      - GOCACHE={ROOT}/cache
+      - GOMODCACHE={ROOT}/data/pkg/mod
+    archive:
+      enable: true
+      package: "https://go.dev/dl/go{VERSION}.linux-amd64.tar.gz"
+      script:
+        install:
+          after:
+            - "mkdir -p {ROOT}/data {ROOT}/cache"
+            - "ln -sf {ROOT}/go/bin {ROOT}/bin"
