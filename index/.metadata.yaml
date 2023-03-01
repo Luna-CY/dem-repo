@@ -1,7 +1,0 @@
-version: "1672999082"
-files:
-  - "golang"
-  - "node"
-  - "jdk"
-  - "python"
-  - "protoc"
