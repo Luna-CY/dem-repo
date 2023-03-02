@@ -7,7 +7,7 @@ versions:
       - "{ROOT}/bin"
     archive:
       enable: true
-      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/packages/python/{VERSION}/darwin-amd64.tar.gz"
+      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/{VERSION}/darwin-amd64.tar.gz"
     source:
       enable: true
       package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
@@ -52,7 +52,7 @@ versions:
       - "{ROOT}/bin"
     archive:
       enable: true
-      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/packages/python/{VERSION}/darwin-amd64.tar.gz"
+      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/{VERSION}/darwin-amd64.tar.gz"
     source:
       enable: true
       package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
@@ -97,7 +97,7 @@ versions:
       - "{ROOT}/bin"
     archive:
       enable: true
-      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/packages/python/{VERSION}/darwin-amd64.tar.gz"
+      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/{VERSION}/darwin-amd64.tar.gz"
     source:
       enable: true
       package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
@@ -142,7 +142,7 @@ versions:
       - "{ROOT}/bin"
     archive:
       enable: true
-      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/packages/python/{VERSION}/darwin-amd64.tar.gz"
+      package: "https://github.com/Luna-CY/dem-repo.python/raw/main/{VERSION}/darwin-amd64.tar.gz"
     source:
       enable: true
       package: "https://www.python.org/ftp/python/{VERSION}/Python-{VERSION}.tgz"
