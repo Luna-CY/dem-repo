@@ -1,5 +1,13 @@
 name: chromedriver
 versions:
+  - version: 111.0.5563.64
+    alias:
+      - 111.0
+    paths:
+      - "{ROOT}"
+    archive:
+      enable: true
+      package: "https://chromedriver.storage.googleapis.com/{VERSION}/chromedriver_linux64.zip"
   - version: 110.0.5481.77
     alias:
       - 110.0
