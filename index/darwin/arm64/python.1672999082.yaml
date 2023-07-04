@@ -40,10 +40,28 @@ versions:
                 - "mv {TEMP}/openssl-openssl-3.0.7/* {TEMP}"
                 - "{TEMP}/config --prefix={DEPEND}/openssl/3.0.7 --openssldir={DEPEND}/openssl/3.0.7"
                 - "make && make install"
+        - version: readline-8.2
+          source:
+            enable: true
+            package: "https://ftp.gnu.org/gnu/readline/readline-8.2.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/readline-8.2/* {TEMP}"
+                - "{TEMP}/configure --prefix={DEPEND}/readline/8.2"
+                - "make && make install"
+        - version: gdbm-1.23
+          source:
+            enable: true
+            package: "https://ftp.gnu.org/gnu/gdbm/gdbm-1.23.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/gdbm-1.23/* {TEMP}"
+                - "LDFLAGS='-L{DEPEND}/readline/8.2/lib' CFLAGS='-I{DEPEND}/readline/8.2/include' {TEMP}/configure --prefix={DEPEND}/gdbm/1.23 --disable-static --enable-libgdbm-compat"
+                - "make && make install"
       build:
         chains:
           - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
-          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
+          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib -L{DEPEND}/gdbm/1.23/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include -I{DEPEND}/gdbm/1.23/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
           - "make && make install"
   - version: 3.10.9
     alias:
@@ -85,10 +103,28 @@ versions:
                 - "mv {TEMP}/openssl-openssl-3.0.7/* {TEMP}"
                 - "{TEMP}/config --prefix={DEPEND}/openssl/3.0.7 --openssldir={DEPEND}/openssl/3.0.7"
                 - "make && make install"
+        - version: readline-8.2
+          source:
+            enable: true
+            package: "https://ftp.gnu.org/gnu/readline/readline-8.2.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/readline-8.2/* {TEMP}"
+                - "{TEMP}/configure --prefix={DEPEND}/readline/8.2"
+                - "make && make install"
+        - version: gdbm-1.23
+          source:
+            enable: true
+            package: "https://ftp.gnu.org/gnu/gdbm/gdbm-1.23.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/gdbm-1.23/* {TEMP}"
+                - "LDFLAGS='-L{DEPEND}/readline/8.2/lib' CFLAGS='-I{DEPEND}/readline/8.2/include' {TEMP}/configure --prefix={DEPEND}/gdbm/1.23 --disable-static --enable-libgdbm-compat"
+                - "make && make install"
       build:
         chains:
           - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
-          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
+          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib -L{DEPEND}/gdbm/1.23/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include -I{DEPEND}/gdbm/1.23/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
           - "make && make install"
   - version: 3.9.16
     alias:
@@ -130,10 +166,28 @@ versions:
                 - "mv {TEMP}/openssl-openssl-3.0.7/* {TEMP}"
                 - "{TEMP}/config --prefix={DEPEND}/openssl/3.0.7 --openssldir={DEPEND}/openssl/3.0.7"
                 - "make && make install"
+        - version: readline-8.2
+          source:
+            enable: true
+            package: "https://ftp.gnu.org/gnu/readline/readline-8.2.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/readline-8.2/* {TEMP}"
+                - "{TEMP}/configure --prefix={DEPEND}/readline/8.2"
+                - "make && make install"
+        - version: gdbm-1.23
+          source:
+            enable: true
+            package: "https://ftp.gnu.org/gnu/gdbm/gdbm-1.23.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/gdbm-1.23/* {TEMP}"
+                - "LDFLAGS='-L{DEPEND}/readline/8.2/lib' CFLAGS='-I{DEPEND}/readline/8.2/include' {TEMP}/configure --prefix={DEPEND}/gdbm/1.23 --disable-static --enable-libgdbm-compat"
+                - "make && make install"
       build:
         chains:
           - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
-          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
+          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib -L{DEPEND}/gdbm/1.23/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include -I{DEPEND}/gdbm/1.23/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/3.0.7 --enable-optimizations"
           - "make && make install"
   - version: 3.8.16
     alias:
@@ -149,7 +203,7 @@ versions:
       build:
         chains:
           - "mv {TEMP}/Python-{VERSION}/* {TEMP}"
-          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/1.1.1.p --enable-optimizations"
+          - "LDFLAGS='-L{DEPEND}/xz/5.2.6/lib -L{DEPEND}/zlib/1.2.12/lib -L{DEPEND}/gdbm/1.23/lib' CFLAGS='-I{DEPEND}/xz/5.2.6/include -I{DEPEND}/zlib/1.2.12/include -I{DEPEND}/gdbm/1.23/include' {TEMP}/configure --prefix={ROOT} --with-openssl={DEPEND}/openssl/1.1.1.p --enable-optimizations"
           - "make && make install"
       depends:
         - version: xz-5.2.6
@@ -179,4 +233,22 @@ versions:
               chains:
                 - "mv {TEMP}/openssl-OpenSSL_1_1_1p/* {TEMP}"
                 - "{TEMP}/config --prefix={DEPEND}/openssl/1.1.1.p --openssldir={DEPEND}/openssl/1.1.1.p"
+                - "make && make install"
+        - version: readline-8.2
+          source:
+            enable: true
+            package: "https://ftp.gnu.org/gnu/readline/readline-8.2.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/readline-8.2/* {TEMP}"
+                - "{TEMP}/configure --prefix={DEPEND}/readline/8.2"
+                - "make && make install"
+        - version: gdbm-1.23
+          source:
+            enable: true
+            package: "https://ftp.gnu.org/gnu/gdbm/gdbm-1.23.tar.gz"
+            build:
+              chains:
+                - "mv {TEMP}/gdbm-1.23/* {TEMP}"
+                - "LDFLAGS='-L{DEPEND}/readline/8.2/lib' CFLAGS='-I{DEPEND}/readline/8.2/include' {TEMP}/configure --prefix={DEPEND}/gdbm/1.23 --disable-static --enable-libgdbm-compat"
                 - "make && make install"
