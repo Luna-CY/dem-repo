@@ -1,7 +1,7 @@
 index:
   darwin:
     amd64:
-      - "golang.1672999082.yaml"
+      - "golang.1707351936.yaml"
       - "node.1672999082.yaml"
       - "jdk.1672999082.yaml"
       - "python.1672999082.yaml"
@@ -11,7 +11,7 @@ index:
       - "redis.1672999082.yaml"
       - "chromedriver.1672999082.yaml"
     arm64:
-      - "golang.1672999082.yaml"
+      - "golang.1707351936.yaml"
       - "node.1672999082.yaml"
       - "jdk.1672999082.yaml"
       - "python.1672999082.yaml"
